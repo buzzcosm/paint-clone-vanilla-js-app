@@ -16,7 +16,6 @@ const { body } = document;
 const canvas = document.createElement('canvas');
 canvas.id = 'canvas';
 const context = canvas.getContext('2d');
-
 let currentSize = 10;
 let bucketColor = '#FFFFFF';
 let currentColor = '#A51DAB';
@@ -183,16 +182,13 @@ loadStorageBtn.addEventListener('click', () => {
     setTimeout(switchToBrush, 1500);
   } else {
     activeToolEl.textContent = 'No Canvas Found';
-    setTimeout(switchToBrush, 1500); 
+    setTimeout(switchToBrush, 1500);
   }
-
 });
 
 // Clear Local Storage
 clearStorageBtn.addEventListener('click', () => {
-  if (localStorage.getItem('savedCanvas')) {
-    localStorage.removeItem('savedCanvas');
-  }
+  localStorage.removeItem('savedCanvas');
   // Active Tool
   activeToolEl.textContent = 'Local Storage Cleared';
   setTimeout(switchToBrush, 1500);
@@ -200,8 +196,8 @@ clearStorageBtn.addEventListener('click', () => {
 
 // Download Image
 downloadBtn.addEventListener('click', () => {
-  downloadBtn.href = canvas.toDataURL("image/jpeg", 1);
-  downloadBtn.download = 'paint-examle.jpg';
+  downloadBtn.href = canvas.toDataURL('image/jpeg', 1);
+  downloadBtn.download = 'paint-example.jpeg';
   // Active Tool
   activeToolEl.textContent = 'Image File Saved';
   setTimeout(switchToBrush, 1500);
