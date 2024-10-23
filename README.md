@@ -25,3 +25,4 @@ Programmed in vanilla-js.
 ## Topics
 
 - `canvas`
+- [Wikipedia - Extensibility](https://en.wikipedia.org/wiki/Extensibility) 🔥
